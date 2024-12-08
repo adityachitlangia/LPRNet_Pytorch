@@ -1,45 +1,39 @@
-# LPRNet_Pytorch
-Pytorch Implementation For LPRNet, A High Performance And Lightweight License Plate Recognition Framework.  
-完全适用于中国车牌识别（Chinese License Plate Recognition）及国外车牌识别！  
-目前仅支持同时识别蓝牌和绿牌即新能源车牌等中国车牌，但可通过扩展训练数据或微调支持其他类型车牌及提高识别准确率！
+# LPRNet Optimization Project
 
-# dependencies
+This repository contains work focused on optimizing the **LPRNet PyTorch model** for efficient vehicle license plate recognition. The objective was to enhance the model's performance by reducing its size, improving inference speed, and maintaining high accuracy.
 
-- pytorch >= 1.0.0
-- opencv-python 3.x
-- python 3.x
-- imutils
-- Pillow
-- numpy
+## Project Overview
 
-# pretrained model
+In this project, various optimization techniques were applied to the LPRNet model to achieve the following goals:
 
-* [pretrained_model](https://github.com/sirius-ai/LPRNet_Pytorch/tree/master/weights/)
+- **Model Compression**:
+  - Fine-grained pruning to eliminate redundant weights and reduce model complexity.
+  - Static quantization to lower the precision and size of the model while preserving its predictive capabilities.
 
-# training and testing
+- **Model Compilation**:
+  - Graph optimization and compilation using tools such as TVM Auto-Scheduler for inference speedup.
+## Objectives
 
-1. prepare your datasets, image size must be 94x24.
-2. base on your datsets path modify the scripts its hyperparameters --train_img_dirs or --test_img_dirs.
-3. adjust other hyperparameters if need.
-4. run 'python train_LPRNet.py' or 'python test_LPRNet.py'.
-5. if want to show testing result, add '--show true' or '--show 1' to run command.
+- **Model Size**: Achieve a significant reduction in model size.
+- **Inference Speed**: Enhance the speed of inference on platforms like Google Colab.
+- **Accuracy**: Ensure high test accuracy is maintained or improved post-optimization.
 
-# performance
+## Tools and Techniques
 
-- personal test datasets.
-- include blue/green license plate.
-- images are very widely.
-- total test images number is 27320.
+- **Optimization Methods**:
+  - Fine-grained pruning
+  - Static quantization
+  - Graph Optimization
+  - TVM Auto-Schedulert
 
-|  size  | personal test imgs(%) | inference@gtx 1060(ms) |
-| ------ | --------------------- | ---------------------- |
-|  1.7M  |         96.0+         |          0.5-          |
+- **Evaluation Metrics**:
+  - **Accuracy**: Test accuracy on vehicle license plate datasets.
+  - **Inference Speed**: Speed improvement measured on Google Colab and Android platforms.
+  - **Model Size**: ONNX model size before and after optimizations.
 
-# References
+## Results and Insights
 
-1. [LPRNet: License Plate Recognition via Deep Neural Networks](https://arxiv.org/abs/1806.10447v1)
-2. [PyTorch中文文档](https://pytorch-cn.readthedocs.io/zh/latest/)
-
-# postscript
-
-If you found this useful, please give me a star, thanks!
+The project successfully demonstrated:
+- A reduction in the model's size through pruning and quantization.
+- Noticeable improvements in inference speed on both Google Colab and Android devices.
+- High accuracy maintained, comparable to or better than the original LPRNet model.
