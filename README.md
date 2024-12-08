@@ -37,3 +37,7 @@ The project successfully demonstrated:
 - A reduction in the model's size through pruning and quantization.
 - Noticeable improvements in inference speed on both Google Colab and Android devices.
 - High accuracy maintained, comparable to or better than the original LPRNet model.
+
+Please find attached the link to Google Colab Notebook to run the scripts for different model variants:
+https://colab.research.google.com/drive/1udYBechs8XWO4Stv-ByPruHVbKWwaEtY?usp=sharing
+
