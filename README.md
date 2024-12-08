@@ -24,7 +24,7 @@ In this project, various optimization techniques were applied to the LPRNet mode
   - Fine-grained pruning
   - Static quantization
   - Graph Optimization
-  - TVM Auto-Schedulert
+  - Multiple compiler optimization using TVM Auto-Scheduler
 
 - **Evaluation Metrics**:
   - **Accuracy**: Test accuracy on vehicle license plate datasets.
