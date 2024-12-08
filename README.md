@@ -28,14 +28,14 @@ In this project, various optimization techniques were applied to the LPRNet mode
 
 - **Evaluation Metrics**:
   - **Accuracy**: Test accuracy on vehicle license plate datasets.
-  - **Inference Speed**: Speed improvement measured on Google Colab and Android platforms.
+  - **Inference Speed**: Speed improvement measured on Google Colab
   - **Model Size**: ONNX model size before and after optimizations.
 
 ## Results and Insights
 
 The project successfully demonstrated:
 - A reduction in the model's size through pruning and quantization.
-- Noticeable improvements in inference speed on both Google Colab and Android devices.
+- Noticeable improvements in inference speed on Google Colab 
 - High accuracy maintained, comparable to or better than the original LPRNet model.
 
 Please find attached the link to Google Colab Notebook to run the scripts for different model variants:
